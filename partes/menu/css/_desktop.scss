@@ -1,0 +1,68 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(bigger) {
+
+
+    #icon{display: none;}
+
+
+    #fundao{
+        display: none;
+    }
+
+
+
+
+
+    nav {
+        width: 100%;
+        padding-top: 1.66015625vw;
+        padding-bottom: 1.66015625vw;
+        padding-left: 10.3515625vw;
+        background-color: $cor1;
+
+        color: white;
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 3.90625vw;
+            li {
+
+                position: relative;
+                white-space: nowrap;
+                a {
+                    color: white;
+                    text-transform: capitalize;
+                }
+                font-size: 1.7578125vw;
+                font-weight: 200;
+                text-align: center;
+                ul {
+                    position: absolute;
+                    margin-top: 0.5vw;
+                    display: none;
+                    li{
+                        border: 1px solid darken($cor1,20);
+                        background-color: $cor1;
+                        position: relative;
+                        padding-left: 1vw;
+                        padding-right: 1vw;
+                        left: 50%;
+                        position: relative;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

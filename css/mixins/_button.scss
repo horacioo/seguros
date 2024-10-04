@@ -1,0 +1,32 @@
+@import "../cores/cores";
+
+@mixin botao() {
+    @media screen and (min-width: 768px) {
+       padding-left:1.66015625vw;;
+       padding-top:1.5625vw;
+       padding-right:1.66015625vw;
+       padding-bottom:1.5625vw;
+       color: white;
+       background: linear-gradient(to bottom, $cor1, $cor3);
+       font-size: 1.46484375vw;
+       margin-right: 1.7578125vw;
+       border-radius:0.390625vw;
+       display: inline-block;
+        @content
+    }
+
+    @media screen and (max-width: 767px) {
+        background: linear-gradient(to bottom, $cor1, $cor3);
+        color: white;
+        padding: 4vw;
+        font-size: 7vw;
+        position: relative;
+        z-index: 30;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        border:none;
+        margin-bottom: 3vh;
+        border-radius: 0.390625vw; 
+    }
+}

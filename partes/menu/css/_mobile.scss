@@ -1,0 +1,121 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/mixins/fontes";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(mobile) {
+    $distancia: 70vw;
+
+    #icon {
+        display: block;
+        position: fixed;
+        left: 1.953125vw;
+        top: 1.953125vw;
+        width: 10.90625vw;
+        z-index: 800000;
+    }
+ 
+    #fundao {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        z-index: 890000;
+        background-color: $cor1;
+        opacity: 0.2;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    nav {
+        //border-radius: 1.953125vw;
+        padding-top: 3.604166666667vh;
+        max-width: $distancia;
+        padding: 4vw;
+        background-color: $cor1;
+        position: fixed;
+        left: -50vw;
+        top: 0;
+        height: 100vh;
+        z-index: 900000;
+
+        @include fontes();
+        ul {
+            gap: 2.9296875vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            *:has(.sub-menu) {
+                padding: 3vw;
+                background-color: rgba(255, 255, 255, 0.175);
+                border-radius: 0.9765625vw;
+            }
+
+            *:has(.sub-menu) {
+                &:hover{
+                    .sub-menu{
+                        position: absolute;
+                        ///left: 39vw;
+                        top: 0;
+                        background-color: lighten($cor1,5);
+                        width: $distancia;
+                        display: block;
+                        height: 100vh;
+                        padding: 10vw;
+                        animation: AbreSubMenu 300ms ease-in-out forwards;
+                        border-left: 0.1953125vw solid darken($cor1,10);
+                        li{
+                            background-color: $cor1;
+                            width: 90%;
+                            padding: 2vw;
+                            border-radius:1.953125vw;
+                            margin-bottom: 2vw;
+                            text-align: center;
+                            
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+            li {
+                max-width: 100%;
+
+                a {
+                    text-transform: capitalize;
+                    color: white;
+                }
+                .sub-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .openMenu {
+        animation: AbreMenu 900ms ease-in-out forwards;
+    }
+
+
+    @keyframes AbreMenu {
+        0% { left: -$distancia;    }
+        100% { left: 0;  }
+    }
+    
+    @keyframes AbreSubMenu {
+        0% { left: 60vw; opacity: 0;  }
+        100% { left: 39vw; opacity: 1; }
+    }
+}

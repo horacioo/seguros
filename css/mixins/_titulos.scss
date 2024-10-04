@@ -1,0 +1,12 @@
+@mixin titulos() {
+    @media screen and (min-width: 769px) {
+    }
+
+    @media screen and (max-width: 768px) {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        width: 100%;
+        letter-spacing: 0.1953125vw;
+        font-size: 8vw;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,71 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(bigger) {
+    main {
+        padding-left: 8.59375vw;
+        padding-top: 5.859375vw;
+        padding-right: 2.9296875vw;
+        padding-bottom: 4.8828125vw;
+        display: flex;
+        gap: 3.515625vw;
+        position: relative;
+
+
+
+        .btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .custom-prev{left: 8.7vw;}
+        .custom-next{left: 49.3vw;}
+
+
+        
+
+
+
+        ul {
+            width: 40.72265625vw;
+            height: 21.875vw;
+            border-radius: 0.9765625vw;
+            display: block;
+            //border: 0.1953125vw solid $cor1;
+            li{
+                picture{
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        section {
+            width: 42.48046875vw;
+            min-height: 18.06640625vw;
+            h2 {
+                
+                font-size: 2.24609375vw;
+                color: $cor1;
+                margin-bottom: 1.46484375vw;
+            }
+            p {
+                font-size: 1.66015625vw;
+                line-height: 1.80;
+                color: $cor1;
+            }
+        }
+    }
+}

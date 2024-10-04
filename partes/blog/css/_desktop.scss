@@ -1,0 +1,31 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(bigger) {
+    #blog {
+        margin-left: 8.59375vw;
+        margin-right: 2.9296875vw;
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap:1.7744140625vw;
+            li{
+                width: 19.421875vw;
+                min-height: 27.333984375vw;
+                padding: 1.111328125vw;
+                border: 0.09765625vw solid #E0E0E0;
+                display: flex;
+                border-radius: 1.0458984375vw;
+            }
+        } 
+    }
+}
