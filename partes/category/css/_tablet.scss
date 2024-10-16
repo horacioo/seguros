@@ -1,0 +1,88 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/cores/cores";
+@import "../../../css/mixins/fontes";
+@import "../../../css/mixins/button";
+@import "../../../css/util/_breakpoints";
+
+
+
+@media screen and (min-width: $tablet) and (max-width:$desktop){
+    #header {
+        height: 14.2578125vw;
+        padding-top: 2.63671875vw;
+        padding-bottom: 2.21484375vw;
+        position: relative;
+        background: linear-gradient(to bottom, #dadada, #ffffff);
+        padding-left: 2.9296875vw;
+
+        section {
+            width: 93.9453125vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2.1484375vw;
+
+            picture {
+                position: relative;
+
+                img {
+                    width: 35.7421875vw;
+                    height: auto;
+                }
+            }
+
+            #search {
+                form {
+                    div {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                    input {
+                        outline: none;
+                        width: 33.88671875vw;
+                        height: 3.30796vw;
+                        border-left: none;
+                        border: 1px solid $cor1;
+                        padding-left: 1vw;
+                    }
+
+                    input[type="submit"] {
+                        width: 3.3671875vw;
+                        height: 3.3371875vw;
+                        border: 0.09765625vw solid $cor1;
+                        background-color: $cor1;
+                        padding-left: 0;
+                        position: relative;
+                        background-image: url("./wp-content/themes/grafica/partes/header/imagens/iconeBusca.svg");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        text-indent: -9999px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            #horarios {
+                width: 15.52734375vw;
+                display: flex;
+                min-height: 20px;
+                flex-direction: column;
+                background-color: white;
+                padding-left: 0.48828125vw;
+                padding-right: 0.48828125vw;
+                padding-top: 0.390625vw;
+                padding-bottom: 0.390625vw;
+                border-radius: 0.48828125vw;
+                border: 0.126953125vw solid $cor1;
+                gap: 0.390625vw; 
+                line-height: 1.26953125vw;
+                span {
+                    display: block;
+                    color: $cor1;
+                    font-size: 1.07421875vw;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

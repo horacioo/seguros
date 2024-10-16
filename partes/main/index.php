@@ -56,7 +56,7 @@
 
     <section>
         <h2>Seguradoras com que trabalhamos</h2>
-        <p>on onoasndo adno asaas dasdn sjdnssnd on onoas ndoa dnoasa asdasdn sjdnssnd on ono asndo adno asaas dasdn sjdnssnd on onoasndo sjdnssnd on onoas ndoa dnoasa asdasnoas ndo adno asaas dasdn sjdn ssnd on onoas ndoa dn oasa asdasdn sjdnssnd on ono asndo adno asaas dasdn sjdnssnd </p>
+        <p>Apresentamos as seguradoras parceiras com as quais trabalhamos: Bradesco Seguros, Porto Seguro, Allianz e SulAmérica. Elas oferecem proteção de qualidade para sua vida, carro e celular, garantindo segurança e confiança para você e sua família! </p>
     </section>
 
 

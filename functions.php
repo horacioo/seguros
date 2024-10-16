@@ -27,7 +27,10 @@ function disable_block_library_css()
 add_action('wp_enqueue_scripts', 'disable_block_library_css', 100);
 /**********************************************************************/
 $addr = get_template_directory(); 
-include $addr . "/../grafica/funcoes/reduzir.php";
+$addr = str_replace("\\","/", $addr);
+require_once "".$addr."/funcoes/reduzir.php"; //include_once "". $addr . "/funcoes/reduzir.php";
+
+
 
 /**********************************************************************/
 

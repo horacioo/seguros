@@ -1,0 +1,77 @@
+@import "../../../css/mixins/fontes";
+
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+@include respond-to(mobile) {
+    #contatos {
+        position: relative;
+        background-color: $cor1;
+        color: white;
+        padding-top: 15.7265625vw;
+        padding-left: 8.59375vw;
+        padding-right: 8.59375vw;
+        height: auto;
+        margin-top:10vw;
+
+
+
+         background-image: url("#{$url}/wp-content/themes/seguros/partes/contatos/imagens/fundo_azul.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        #texto {
+            position: relative;
+            min-height: 19.1728515625vw;
+            height: auto;
+            width: 100%;
+            background-color: white;
+            color: $cor1;
+            padding-top: 2.025390625vw;
+            padding-left: 2.294921875vw;
+            padding-right: 2.294921875vw;
+            border-radius: 3vw;
+            padding-bottom: 2.36328125vw;
+
+            h2 {
+                @include fontes();
+            }
+            p {
+                @include fontes();
+                line-height: 1.5;
+                width: 100%;
+                position: relative;
+                height: auto;
+                text-align: justify;
+                margin-bottom: 5vw;
+            }
+
+            #icones {
+                position: relative;
+                display: flex;
+                gap: 4.3623046875vw;
+                justify-content: center;
+                img {
+                    width: 15.400390625vw;
+                    height: 15.400390625vw;
+                }
+            }
+        }
+
+        picture {
+            position: relative;
+            //width: 34.9697265625vw;
+            //height: 34.9697265625vw;
+            //right: 0;
+            //bottom: 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

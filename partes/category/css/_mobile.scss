@@ -1,0 +1,129 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/cores/cores";
+@import "../../../css/mixins/fontes";
+@import "../../../css/mixins/button";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/mixins/button";
+
+@mixin descricoes() {
+    margin-top: 5vh;
+    line-height: 2;
+    text-align: justify;
+    @include fontes();
+    img{ 
+        max-width: 40%; height: auto; 
+        border:1px solid $cor1;
+        margin:2vw;
+        border-radius: 2vw;
+    }
+}
+
+@include respond-to(mobile) {
+    body{
+        width:93vw;
+    }
+    #categorias {
+        @include fontes();
+   
+        width: 50vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 6.640625vw;
+           margin-left: 2.9296875vw;
+           margin-right: 2.9296875vw;
+        margin-bottom: 6.640625vw;
+        color: $cor1;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.9765625vw;
+        grid-template-areas:
+            "paragrafo "
+            "thumb "
+            "texto"
+            "texto2"
+            "posts ";
+
+        .pai {
+            @include botao();
+        }
+
+        .alignleft {
+            float: left;
+            margin-right: 0.5vw;
+            border-radius: 0.9765625vw;
+        }
+
+        .alignright {
+            float: right;
+            margin-right: 0.5vw;
+            border-radius: 0.9765625vw;
+        }
+
+        h1 {
+            margin-top: 7vw;
+            margin-bottom: 7vw;
+            grid-area: paragrafo;
+        }
+
+        #descricao {
+            grid-area: texto;
+            @include descricoes();
+        }
+
+        #descricao2 {
+            grid-area: texto2;
+            @include descricoes();
+        }
+
+        #thumbCategory {
+            max-width: 99%;
+            height: auto;
+            display: block;
+            grid-area: thumb;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 1vw;
+                border: 1px solid $cor1;
+            }
+        }
+
+        #posts {
+            grid-area: posts;
+            margin-top: 2vw;
+            //border:1px solid $cor1;
+            width: 90vw;
+            padding: 1vw;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0.9765625vw;
+            border-radius: 0.58828125vw;
+
+            article {
+                gap: 2.9765625vw;
+                border: 1px solid $cor1;
+                border-radius: 0.48828125vw;
+                padding: 1vw;
+
+                .entry-content {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        color: $cor1;
+                    }
+                    picture {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            border-radius: 0.38828125vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

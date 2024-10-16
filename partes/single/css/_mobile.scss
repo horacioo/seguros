@@ -1,0 +1,35 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/mixins/fontes";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+@include respond-to(mobile) {
+    section{
+        @include fontes();
+        margin-bottom: 1.9765625vw;
+        border:1px solid $cor1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.48828125vw;
+        padding: 1.302083333333vh;
+        background-color: white;
+        
+        a{
+            color: $cor1;
+        }
+        img{
+            border: 1px solid $cor1;
+            border-radius: 0.48828125vw;
+            
+        }
+    }
+}

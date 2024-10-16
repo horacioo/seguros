@@ -1,0 +1,74 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+
+$fontSize: 1.26015625vw;
+
+@mixin fundosBrancos() {
+    padding-bottom: 0.6748046875vw;
+    padding-left: 1.0126953125vw;
+    padding-right: 1.0126953125vw;
+    padding-top: 0.9748046875vw;
+    background-color: lighten($cor1, 10);
+    color: white;
+    border-radius: 0.29296875vw;
+    
+}
+
+@include respond-to(bigger) {
+    footer {
+        
+        background-color: lighten($cor1, 0);
+        padding-left: 8.59375vw;
+        padding-right: 8.59375vw;
+        padding-top:2.169921875vw;
+        display: flex;
+        gap: 0.9765625vw;
+        justify-content: space-around;
+        padding-bottom: 2.2353515625vw;
+
+
+        #contato {
+            /******************************/
+            @include fundosBrancos();
+            gap: 1.080078125vw;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            font-size: $fontSize;
+            /******************************/
+           
+        }
+
+        #listaDeProdutos {
+         
+            @include fundosBrancos();
+            width: 36.2314453125vw;
+            h2{
+                margin-bottom: 1.080078125vw;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                gap: 2.2353515625vw;
+                width: 100%;
+                flex-wrap: wrap; 
+                justify-content: space-between;
+                li{
+                    
+                    white-space: nowrap;
+                    font-size: $fontSize;
+                }
+            }
+        }
+    }
+}

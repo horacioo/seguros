@@ -1,0 +1,131 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/mixins/button";
+
+@mixin descricoes() {
+    line-height: 2;
+    text-align: justify;
+    font-size: 1.171875vw;
+}
+
+@include respond-to(bigger) {
+    #categorias {
+        border: 1px solid $cor1;
+        width: 94%;
+        margin-top: 6.640625vw;
+        margin-left: 2.9296875vw;
+        margin-right: 2.9296875vw;
+        margin-bottom: 6.640625vw;
+        color: $cor1;
+        padding: 2vw;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        gap: 0.9765625vw;
+        grid-template-areas:
+            "paragrafo paragrafo paragrafo paragrafo paragrafo"
+            "thumb thumb texto texto texto"
+            "texto2 texto2 texto2 texto2 texto2 "
+            "posts posts posts posts posts";
+
+        .pai {
+            @include botao();
+        }
+
+        .alignleft {
+            float: left;
+            margin-right: 0.5vw;
+            border-radius: 0.9765625vw;
+        }
+
+        .alignright {
+            float: right;
+            margin-right: 0.5vw;
+            border-radius: 0.9765625vw;
+        }
+
+        h1 {
+            margin-bottom: 2vw;
+            font-size: 1.5625vw;
+            grid-area: paragrafo;
+        }
+
+        #descricao {
+            grid-area: texto;
+            @include descricoes();
+        }
+
+        #descricao2 {
+            grid-area: texto2;
+            @include descricoes();
+        }
+
+        #thumbCategory {
+            width: 38.28125vw;
+            height: auto;
+            display: block;
+            grid-area: thumb;
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 1vw;
+                border: 1px solid $cor1;
+            }
+        }
+
+        #posts {
+            grid-area: posts;
+            margin-top: 2vw;
+            //border:1px solid $cor1;
+            width: 100%;
+            padding: 1vw;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.9765625vw;
+            border-radius: 0.58828125vw;
+
+            article {
+                gap: 2.9765625vw;
+                border: 1px solid $cor1;
+                border-radius: 0.48828125vw;
+                padding: 1vw;
+
+
+                p{
+                    font-size: 0.9765625vw;
+                    line-height: 1.5;
+                }
+
+                .entry-content {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    a {
+                        color: $cor1;
+                    }
+
+                    h2{
+                        margin-top:1vw;
+                        margin-bottom:1vw;
+                    }
+
+                    p{
+                        font-size: 0.87890625vw;
+                    }
+
+
+                    picture {
+                        display: block;
+                        width: 100%;
+                        img {
+                            border:1px solid $cor1;
+                            width: 100%;
+                            height: auto;
+                            border-radius: 0.38828125vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

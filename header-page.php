@@ -15,9 +15,6 @@
 
     ?>
 
-
-
-
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
     <!--------------------------------------------------------------->
@@ -30,15 +27,19 @@
 
     <link rel="stylesheet" href="<?php echo tema; ?>/css/slick/slick.css" media="all">
     <style>
-        <?php echo file_get_contents(tema . "/css/page.css"); ?>
-    </style>
+        
+        <?php echo file_get_contents(tema . "/css/page.css"); 
+        if(is_single()){
+            echo file_get_contents(tema . "/css/single.css"); 
+        }
+
+        ?>
+
+</style>
 
     <?php wp_head(); ?>
 
-    <!--<link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-320.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-375.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-425.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/imagem1.avif" as="image">-->
+
 
 </head>
 

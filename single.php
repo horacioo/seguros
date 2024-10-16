@@ -1,62 +1,67 @@
 <?php get_header('page');  ?>
 
-<?php
-get_template_part('partes/header/index');
-get_template_part('partes/menu/index');
-?>
+<?php get_template_part('partes/menu/index'); ?>
 
+<?php $idDaCategoria = null; ?>
 
 <main id="page">
     <?php get_template_part('partes/pagina/index'); ?>
-
-    <!----------------------------------------------------------->
-
-    <aside>
-
-        <h2>Serviços</h2>
-        <?php
-        $parent_id = 11; // Substitua pelo ID da sua página "Produtos"
-        // Obter as páginas filhas
-        $children = get_children(array(
-            'post_parent' => $parent_id,
-            'post_type'   => 'page',
-            'orderby'     => 'menu_order',
-            'order'       => 'ASC',
-            'numberposts'    => 3
-        ));
-
-
-
-        // Verificar se existem páginas filhas
-        if ($children) {
-            echo '<ul>';
-            foreach ($children as $child) {
-
-                /**************************************************************/
-                $image_id = get_post_thumbnail_id($child->ID); // Obter ID do thumbnail
-                $image_path = get_attached_file($image_id); // Caminho absoluto da image
-                /********************************************************/
-                $thumb = get_the_post_thumbnail_url($child->ID);
-                /******************************************************************************/
-                $tamanhos = [
-                    ['largura' => 512, 'altura' => 211,   'qualidade' => 65],
-                ];
-                $imagens = reduzirImagem($image_path, $tamanhos);
-                /*******************************************************************************/
-                echo '<li>
-                       <img alt="imagem do produto" width="219" height="134" src="' . $imagens['urls']['512x211'] . '" class="thumbNail">
-                       <a href="' . get_permalink($child->ID) . '">' . get_the_title($child->ID) . '</a></li>';
-            }
-            echo '</ul>';
-        } else {
-            echo '-';
-        }
-
-        ?>
-
-    </aside>
-    <!----------------------------------------------------------->
 </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside>
+
+    <?php
+
+
+
+   // $current_category = get_queried_object_id();
+    $category_y_id = get_queried_object_id();
+    $subcategories = get_term_children($category_y_id, 'category');
+    $current_post_id = get_the_ID();
+
+    $xx = get_the_category($id);
+    $current_category = $xx[0]->term_id;
+    $args = array(
+        'cat' => $current_category,
+        'posts_per_page' => 30,
+        'paged' => get_query_var('paged') ? get_query_var('paged') : 1 ,// Paginação
+        'post__not_in' => array($current_post_id), // Exclui o post atual
+    );
+    $query = new WP_Query($args);
+    while ($query->have_posts()) : $query->the_post(); ?>
+        <section>
+            <?php $img = get_the_post_thumbnail_url($id, 'thumbnail') ?>
+            <?php if ($img): ?><img src="<?php echo "$img"; ?>" alt="teste"> <?php endif; ?>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?>
+        </section>
+    <?php endwhile; ?>
+</aside>
+
+
+
+
+
+
+
+
 
 
 <?php get_template_part('partes/contatos_/index'); ?>

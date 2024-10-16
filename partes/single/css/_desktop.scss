@@ -1,0 +1,33 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+@include respond-to(bigger) {
+    aside {
+        border: 0px solid $cor1;
+        width: 100%;
+        display: block;
+       
+
+        section {
+            border: 1px solid $cor1;
+            margin-bottom: 0.29296875vw;
+            padding: 0.48828125vw;
+            background-color: white;
+            img {
+                width: 100%;
+                height: auto;
+                border: 1px solid $cor1;
+            }
+            a {
+                font-size: 0.87890625vw;
+                color: darken($cor1,10);
+                font-weight: 100;
+                line-height: 1.4;
+            }
+        }
+    }
+}
