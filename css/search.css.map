@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA;;;;;;;;;EASE",
-"sources": ["search.scss"],
-"names": [],
-"file": "search.css"
-}
+{"version":3,"sources":["search.scss"],"names":[],"mappings":"AAAA;;;;;;;;;CAAA","file":"search.css"}

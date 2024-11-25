@@ -17,7 +17,7 @@
   }
 }
 @media screen and (max-width: 767px) and (max-width: 768px) {
-  section {
+  section body {
     width: 100%;
     font-size: 3.660156vw;
     line-height: 6vw;
@@ -25,7 +25,7 @@
   }
 }
 @media screen and (max-width: 767px) and (max-width: 500px) {
-  section {
+  section body {
     width: 100%;
     font-size: 5vw;
     line-height: 9vw;
@@ -89,7 +89,7 @@
     padding-right: 1.66015625vw;
     padding-bottom: 1.5625vw;
     color: white;
-    background: linear-gradient(to bottom, #68798F, #9EA9B8);
+    background: linear-gradient(to bottom, #323b45, #65758b);
     font-size: 1.46484375vw;
     margin-right: 1.7578125vw;
     border-radius: 0.390625vw;
@@ -98,7 +98,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (max-width: 767px) {
   #header section a {
-    background: linear-gradient(to bottom, #68798F, #9EA9B8);
+    background: linear-gradient(to bottom, #323b45, #65758b);
     color: white;
     padding: 4vw;
     font-size: 7vw;
@@ -160,6 +160,268 @@
     color: #536071;
     font-weight: 100;
     line-height: 1.4;
+  }
+}
+/*****************************************************/
+.screen-reader-text {
+  width: 1px;
+  overflow: hidden;
+}
+
+/*****************************************************/
+@media screen and (max-width: 767px) {
+  footer {
+    background-color: #68798f;
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+    padding-top: 6.169921875vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5.9765625vw;
+    justify-content: space-around;
+    padding-bottom: 3.2353515625vw;
+  }
+  footer #contato {
+    /******************************/
+    padding: 4.6748046875vw;
+    background-color: #8493a6;
+    color: white;
+    border-radius: 0.79296875vw;
+    width: 100%;
+    gap: 1.080078125vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /******************************/
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 768px) {
+  footer #contato body {
+    width: 100%;
+    font-size: 3.660156vw;
+    line-height: 6vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  footer #contato body {
+    width: 100%;
+    font-size: 5vw;
+    line-height: 9vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer #listaDeProdutos {
+    padding: 4.6748046875vw;
+    background-color: #8493a6;
+    color: white;
+    border-radius: 0.79296875vw;
+    width: 100%;
+    width: 100%;
+  }
+  footer #listaDeProdutos h2 {
+    margin-bottom: 1.080078125vw;
+  }
+  footer #listaDeProdutos ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.2353515625vw;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer #listaDeProdutos ul li {
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 768px) {
+  footer #listaDeProdutos ul li body {
+    width: 100%;
+    font-size: 3.660156vw;
+    line-height: 6vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  footer #listaDeProdutos ul li body {
+    width: 100%;
+    font-size: 5vw;
+    line-height: 9vw;
+    text-align: justify;
+  }
+}
+/*****************************************************/
+.screen-reader-text {
+  width: 1px;
+  overflow: hidden;
+}
+
+/*****************************************************/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #fundao {
+    display: none;
+  }
+  #header {
+    height: auto;
+    padding-top: 9.765625vw;
+    padding-bottom: 15.859375vw;
+    padding-left: 8.59375vw;
+    padding-right: 2.9296875vw;
+    width: 99.98vw;
+    display: block;
+    position: relative;
+  }
+  #header h1 {
+    width: 39.0625vw;
+    font-size: 3.515625vw;
+    line-height: 1.1;
+    margin-bottom: 1.953125vw;
+    color: #3d4754;
+  }
+  #header h2 {
+    width: 38.37890625vw;
+    font-size: 2.24609375vw;
+    line-height: 1.1;
+    margin-bottom: 19px;
+    display: block;
+    color: #3d4754;
+  }
+  #header section {
+    display: inline-block;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-width: 768px) {
+  #header section a {
+    padding-left: 1.66015625vw;
+    padding-top: 1.5625vw;
+    padding-right: 1.66015625vw;
+    padding-bottom: 1.5625vw;
+    color: white;
+    background: linear-gradient(to bottom, #323b45, #65758b);
+    font-size: 1.46484375vw;
+    margin-right: 1.7578125vw;
+    border-radius: 0.390625vw;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (max-width: 767px) {
+  #header section a {
+    background: linear-gradient(to bottom, #323b45, #65758b);
+    color: white;
+    padding: 4vw;
+    font-size: 7vw;
+    position: relative;
+    z-index: 30;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin-bottom: 3vh;
+    border-radius: 0.390625vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #header p {
+    margin-top: 1.85546875vw;
+    width: 36.81640625vw;
+    height: 26.3671875vw;
+    font-size: 1.513671875vw;
+    line-height: 1.8;
+    color: #68798F;
+    text-align: justify;
+    color: #68798F;
+  }
+  #header picture {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 2.9296875vw;
+    top: 9.765625vw;
+  }
+  #header picture img {
+    width: 42.48046875vw;
+    height: 54.6875vw;
+  }
+}
+/*****************************************************/
+.screen-reader-text {
+  width: 1px;
+  overflow: hidden;
+}
+
+/*****************************************************/
+@media screen and (min-width: 767.1px) {
+  #chameWatsApp {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    padding: 0.3vw;
+    width: 5vw;
+    height: auto;
+    z-index: 30000000;
+  }
+  #chameWatsApp img {
+    width: 100%;
+    height: auto;
+  }
+  footer {
+    position: relative;
+    background-color: #68798f;
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+    padding-top: 2.169921875vw;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2.2353515625vw;
+  }
+  footer #contato {
+    /******************************/
+    padding-bottom: 0.6748046875vw;
+    padding-left: 1.0126953125vw;
+    padding-right: 1.0126953125vw;
+    padding-top: 0.9748046875vw;
+    background-color: #dde1e6;
+    color: #485463;
+    border-radius: 0.29296875vw;
+    gap: 1.080078125vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-size: 1.26015625vw;
+    /******************************/
+  }
+  footer #listaDeProdutos {
+    padding-bottom: 0.6748046875vw;
+    padding-left: 1.0126953125vw;
+    padding-right: 1.0126953125vw;
+    padding-top: 0.9748046875vw;
+    background-color: #dde1e6;
+    color: #485463;
+    border-radius: 0.29296875vw;
+    width: 38.2314453125vw;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+  }
+  footer #listaDeProdutos h2 {
+    margin-bottom: 1.080078125vw;
+  }
+  footer #listaDeProdutos ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.0353515625vw;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer #listaDeProdutos ul li {
+    white-space: nowrap;
+    font-size: 1.26015625vw;
   }
 }
 /*****************************************************//*# sourceMappingURL=single.css.map */

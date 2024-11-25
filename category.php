@@ -17,6 +17,6 @@ get_template_part('partes/menu/index');
 <!----------------------------------------------------------->
 
 
+<?php get_template_part('partes/footer/index'); ?> 
 
-<?php //get_template_part('partes/contatos_/index'); ?>
 <?php get_footer(); ?>

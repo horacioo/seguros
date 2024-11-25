@@ -61,7 +61,7 @@
                 }
 
                 .button {
-                    background-color: $cor1;
+                    background-color: darken($cor1,10);
                     padding: 1vw;
                     color: white;
                     border-radius: 0.29296875vw;

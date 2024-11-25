@@ -50,7 +50,7 @@
             <?php $img = get_the_post_thumbnail_url($id, 'thumbnail') ?>
             <?php if ($img): ?><img src="<?php echo "$img"; ?>" alt="teste"> <?php endif; ?>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?>
+            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
         </section>
     <?php endwhile; ?>
 </aside>
@@ -64,5 +64,8 @@
 
 
 
-<?php get_template_part('partes/contatos_/index'); ?>
+<?php //get_template_part('partes/contatos_/index'); ?>
+
+
+<?php get_template_part('partes/footer/index'); ?> 
 <?php get_footer(); ?>

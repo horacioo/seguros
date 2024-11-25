@@ -5,8 +5,8 @@
 
 
     <section>
-        <a href="">mais detalhes</a>
-        <a href="">Fale conosco</a>
+        <a href="https://api.whatsapp.com/send?phone=5513991320809" target="_blank">mais detalhes</a>
+        <a href="https://api.whatsapp.com/send?phone=5513991320809" target="_blank">Fale conosco</a>
     </section>
 
     <p>Você já parou para pensar no quanto a vida é cheia de surpresas? Um seguro pode ser seu melhor amigo nessas horas! Imagine ter a proteção de um seguro de vida, que cuida da sua família se algo acontecer. Ou um seguro auto, que te protege de imprevistos nas ruas. E não podemos esquecer do seguro para celular, que garante que você não fique sem seu aparelho em caso de roubo ou danos. Com um seguro, você compra tranquilidade e segurança, sabendo que está preparado para o inesperado. Invista no seu futuro e viva sem preocupações! </p>

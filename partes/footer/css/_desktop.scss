@@ -10,7 +10,6 @@
     overflow: hidden;
 }
 
-
 $fontSize: 1.26015625vw;
 
 @mixin fundosBrancos() {
@@ -18,24 +17,40 @@ $fontSize: 1.26015625vw;
     padding-left: 1.0126953125vw;
     padding-right: 1.0126953125vw;
     padding-top: 0.9748046875vw;
-    background-color: lighten($cor1, 10);
-    color: white;
+    background-color: lighten($cor1, 40);
+    color: darken($cor1, 15);
     border-radius: 0.29296875vw;
-    
 }
 
 @include respond-to(bigger) {
+    #chameWatsApp {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        background-color: rgba(255, 255, 255, 100);
+        border-radius: 1vw;
+        padding: 0.3vw;
+        width: 5vw;
+        height: auto;
+        z-index: 30000000;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     footer {
-        
+        position: relative;
+
         background-color: lighten($cor1, 0);
         padding-left: 8.59375vw;
         padding-right: 8.59375vw;
-        padding-top:2.169921875vw;
+        padding-top: 2.169921875vw;
         display: flex;
-        gap: 0.9765625vw;
+        //gap: 0.9765625vw;
         justify-content: space-around;
         padding-bottom: 2.2353515625vw;
-
 
         #contato {
             /******************************/
@@ -46,25 +61,24 @@ $fontSize: 1.26015625vw;
             height: auto;
             font-size: $fontSize;
             /******************************/
-           
         }
 
         #listaDeProdutos {
-         
             @include fundosBrancos();
-            width: 36.2314453125vw;
-            h2{
+            width: 38.2314453125vw;
+            padding-right: 2vw;
+            padding-bottom: 2vw;
+            h2 {
                 margin-bottom: 1.080078125vw;
             }
-            ul{
+            ul {
                 display: flex;
                 flex-direction: row;
-                gap: 2.2353515625vw;
+                gap: 2.0353515625vw;
                 width: 100%;
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
                 justify-content: space-between;
-                li{
-                    
+                li {
                     white-space: nowrap;
                     font-size: $fontSize;
                 }
