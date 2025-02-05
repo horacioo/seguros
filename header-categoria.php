@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" itemscope itemtype="https://schema.org/CollectionPage" >
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
+
     <?php
     ob_start();
 
@@ -16,29 +16,66 @@
     ?>
 
 
+<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "<?php single_cat_title(); ?>",
+            "url": "<?php echo get_category_link(get_queried_object_id()); ?>",
+            "description": "<?php echo category_description(); ?>",
+            "hasPart": [
+                <?php
+                if (have_posts()) :
+                    $posts_json = [];
+                    while (have_posts()) : the_post();
+                        $posts_json[] = json_encode([
+                            "@type" => "BlogPosting",
+                            "headline" => get_the_title(),
+                            "author" => [
+                                "@type" => "Person",
+                                "name" => get_the_author()
+                            ],
+                            "datePublished" => get_the_date('c'),
+                            "dateModified" => get_the_modified_date('c'),
+                            "mainEntityOfPage" => [
+                                "@type" => "WebPage",
+                                "@id" => get_permalink()
+                            ],
+                            "url" => get_permalink(),
+                            "description" => wp_strip_all_tags(get_the_excerpt(), true)
+                        ]);
+                    endwhile;
+                    echo implode(',', $posts_json);
+                endif;
+                ?>
+            ]
+        }
+    </script>
 
 
-    <!--------------------------------------------------------------->
-    <!--------------------------------------------------------------->
-    <!--------------------------------------------------------------->
     <style>
-        @font-face {font-family: "Inter";  src: url("<?php echo tema ?>/fontes/Inter-Regular.otf") format('opentype'); } *{  font-family: 'Inter';}
-    </style>
-    <!--------------------------------------------------------------->
-    <!--------------------------------------------------------------->
-    <!--------------------------------------------------------------->
+        @font-face {
+            font-family: "Inter";
+            src: url("<?php echo tema ?>/fontes/Inter-Regular.otf") format('opentype');
+        }
 
-    <!--<link rel="stylesheet" href="<?php echo tema; ?>/css/slick/slick.css" media="all">-->
+        * {
+            font-family: 'Inter';
+        }
+    </style>
+
+
+
+
+    <link rel="alternate" hreflang="pt-br" href="<?php echo home_url(); ?>" />
+
     <style>
         <?php echo file_get_contents(tema . "/css/category.css"); ?>
     </style>
 
     <?php wp_head(); ?>
 
-    <!--<link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-320.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-375.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/img-425.avif" as="image">
-    <link rel="preload" href="<?php echo tema; ?>/partes/slideProdutos/imagens/imagem1.avif" as="image">-->
+
 
 </head>
 

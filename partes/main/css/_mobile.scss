@@ -62,6 +62,8 @@
             }
             p {
                 color: darken($cor1, 10);
+                @include fontes();
+                line-height: 1.7;
             }
         }
     }

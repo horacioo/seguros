@@ -20,6 +20,24 @@
         position: relative;
         @include fontes();
 
+
+
+        .button{
+            padding: 2vw;
+            background-color: $cor1;
+            color: white;
+            font-weight: 100;
+            margin-right: 0.6vw;
+            border-radius: 1vw;
+            &:hover{
+                background-color: adjust-hue($cor1,30);
+            }
+        }
+
+
+
+
+
         h1 {
             width: 100%;
             line-height: 1.6;

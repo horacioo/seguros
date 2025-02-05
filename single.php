@@ -29,8 +29,6 @@
 
     <?php
 
-
-
    // $current_category = get_queried_object_id();
     $category_y_id = get_queried_object_id();
     $subcategories = get_term_children($category_y_id, 'category');
@@ -48,9 +46,9 @@
     while ($query->have_posts()) : $query->the_post(); ?>
         <section>
             <?php $img = get_the_post_thumbnail_url($id, 'thumbnail') ?>
-            <?php if ($img): ?><img src="<?php echo "$img"; ?>" alt="teste"> <?php endif; ?>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <p><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
+            <?php if ($img): ?><img  title="clique e veja mais sobre <?php the_title(); ?>"  src="<?php echo "$img"; ?>" alt="teste"> <?php endif; ?>
+            <h2><a title="clique e veja mais sobre <?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
         </section>
     <?php endwhile; ?>
 </aside>

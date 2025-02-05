@@ -1,23 +1,29 @@
-@import './../util/_breakpoints';
-@import './../variaveis/caminhos';
-
-
-@media screen and (min-width: 0) and (max-width:767px) { .desktop{display: none}; }
-@media screen and (min-width: 768px) { .mobile{display: none};  }
+@import "./../util/_breakpoints";
+@import "./../variaveis/caminhos";
+@import "../../css/mixins/fontes";
 
 
 
-body{
+@media screen and (min-width: 0) and (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+}
+
+body {
     background-image: url("#{$url}/wp-content/themes/seguros/img/fundao.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
 * {
     box-sizing: border-box;
 }
-
 
 p {
     padding: 0;
@@ -52,4 +58,9 @@ body {
     margin: 0px !important;
     max-width: 99.8vw;
     overflow-x: clip;
+
+    
 }
+
+
+@include fontes();

@@ -9,7 +9,7 @@
   }
 }
 body {
-  background-image: url("http://localhost/grafica2//wp-content/themes/seguros/img/fundao.svg");
+  background-image: url("https://negociocertoseguros.com.br//wp-content/themes/seguros/img/fundao.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -53,6 +53,22 @@ body {
   overflow-x: clip;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    font-size: 3.660156vw;
+    line-height: 1.8;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    font-size: 5vw;
+    line-height: 1.8;
+    text-align: justify;
+  }
+}
 .screen-reader-text {
   width: 1px;
   overflow: hidden;
@@ -95,7 +111,7 @@ body {
   nav body {
     width: 100%;
     font-size: 3.660156vw;
-    line-height: 6vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -103,7 +119,7 @@ body {
   nav body {
     width: 100%;
     font-size: 5vw;
-    line-height: 9vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -218,7 +234,7 @@ body {
     padding-right: 1.66015625vw;
     padding-bottom: 1.5625vw;
     color: white;
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     font-size: 1.46484375vw;
     margin-right: 1.7578125vw;
     border-radius: 0.390625vw;
@@ -227,12 +243,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (max-width: 767px) {
   #header section a {
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     color: white;
     padding: 4vw;
     font-size: 7vw;
     position: relative;
-    z-index: 30;
+    z-index: 10;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -349,7 +365,7 @@ body {
   body {
     width: 100%;
     font-size: 3.660156vw;
-    line-height: 6vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -357,7 +373,7 @@ body {
   body {
     width: 100%;
     font-size: 5vw;
-    line-height: 9vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -374,6 +390,7 @@ body {
     grid-row: 1;
   }
   main {
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     grid-column: 1/9;
     color: #3d4754;
@@ -462,7 +479,7 @@ body {
     padding-right: 1.66015625vw;
     padding-bottom: 1.5625vw;
     color: white;
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     font-size: 1.46484375vw;
     margin-right: 1.7578125vw;
     border-radius: 0.390625vw;
@@ -471,12 +488,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (max-width: 767px) {
   #header section a {
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     color: white;
     padding: 4vw;
     font-size: 7vw;
     position: relative;
-    z-index: 30;
+    z-index: 10;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -524,7 +541,6 @@ a {
     padding: 0;
   }
   footer {
-    border: 1px solid rgb(23, 173, 0);
     margin: 1vw;
     grid-area: foot;
     position: relative;
@@ -535,7 +551,6 @@ a {
   }
   nav {
     grid-area: nav;
-    padding: 10px;
   }
   main {
     grid-area: conteudo;
@@ -587,6 +602,21 @@ a {
 
 /*****************************************************/
 @media screen and (max-width: 767px) {
+  #chameWatsApp {
+    position: fixed;
+    padding: 1vw;
+    right: 0.9765625vw;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background-color: white;
+    border-radius: 2vw;
+    z-index: 300000;
+  }
+  #chameWatsApp img {
+    width: 10vw;
+    height: auto;
+  }
   footer {
     background-color: #68798f;
     padding-left: 8.59375vw;
@@ -597,6 +627,10 @@ a {
     gap: 5.9765625vw;
     justify-content: space-around;
     padding-bottom: 3.2353515625vw;
+    position: relative;
+  }
+  footer a {
+    color: white;
   }
   footer #contato {
     /******************************/
@@ -616,7 +650,7 @@ a {
   footer #contato body {
     width: 100%;
     font-size: 3.660156vw;
-    line-height: 6vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -624,7 +658,7 @@ a {
   footer #contato body {
     width: 100%;
     font-size: 5vw;
-    line-height: 9vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -656,7 +690,7 @@ a {
   footer #listaDeProdutos ul li body {
     width: 100%;
     font-size: 3.660156vw;
-    line-height: 6vw;
+    line-height: 1.8;
     text-align: justify;
   }
 }
@@ -664,8 +698,28 @@ a {
   footer #listaDeProdutos ul li body {
     width: 100%;
     font-size: 5vw;
-    line-height: 9vw;
+    line-height: 1.8;
     text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer #brand {
+    display: block;
+    position: absolute;
+    font-size: 2.4vw;
+    text-align: center;
+    bottom: 0vw;
+    width: 97vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3vw;
+    background-color: #6b688f;
+  }
+  footer #brand a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.24vw;
   }
 }
 /*****************************************************/
@@ -716,7 +770,7 @@ a {
     padding-right: 1.66015625vw;
     padding-bottom: 1.5625vw;
     color: white;
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     font-size: 1.46484375vw;
     margin-right: 1.7578125vw;
     border-radius: 0.390625vw;
@@ -725,12 +779,12 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (max-width: 767px) {
   #header section a {
-    background: linear-gradient(to bottom, #323b45, #65758b);
+    background: linear-gradient(to bottom, #EF4400, #ef9400);
     color: white;
     padding: 4vw;
     font-size: 7vw;
     position: relative;
-    z-index: 30;
+    z-index: 10;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -795,7 +849,24 @@ a {
     padding-top: 2.169921875vw;
     display: flex;
     justify-content: space-around;
-    padding-bottom: 2.2353515625vw;
+    padding-bottom: 5.8235351563vw;
+  }
+  footer #brand {
+    display: block;
+    position: absolute;
+    bottom: 0.0090625vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6b688f;
+    width: 100%;
+    padding: 1.2vw;
+    text-align: center;
+  }
+  footer #brand a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.24vw;
   }
   footer #contato {
     /******************************/
@@ -843,10 +914,7 @@ a {
 }
 /*****************************************************/
 /*
-
-
 @import "../partes/header/css/style";
-
 
 //@import "../partes/contatos_/css/style";
 

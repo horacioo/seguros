@@ -10,7 +10,14 @@
     overflow: hidden;
 }
 
-@include respond-to(bigger) {
+@include respond-to(tablet) {
+
+
+    #fundao{
+        display: none;
+    }
+
+
     #header {
         height: auto;
         padding-top: 9.765625vw;
@@ -20,18 +27,6 @@
         width: 99.98vw;
         display: block;
         position: relative;
-
-        .button{
-            padding: 0.5vw;
-            background-color: $cor1;
-            color: white;
-            font-weight: 100;
-            margin-right: 0.6vw;
-            border-radius: 0.2vw;
-            &:hover{
-                background-color: adjust-hue($cor1,30);
-            }
-        }
 
         h1 {
             width: 39.0625vw;

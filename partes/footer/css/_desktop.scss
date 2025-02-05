@@ -41,8 +41,25 @@ $fontSize: 1.26015625vw;
     }
 
     footer {
-        position: relative;
+        #brand {
+            display: block;
+            position: absolute;
+            a {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 100;
+                letter-spacing: 0.24vw;
+            }
+            bottom: 0.0090625vw;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: adjust-hue($cor1, 30);
+            width: 100%;
+            padding: 1.2vw;
+            text-align: center;
+        }
 
+        position: relative;
         background-color: lighten($cor1, 0);
         padding-left: 8.59375vw;
         padding-right: 8.59375vw;
@@ -50,7 +67,7 @@ $fontSize: 1.26015625vw;
         display: flex;
         //gap: 0.9765625vw;
         justify-content: space-around;
-        padding-bottom: 2.2353515625vw;
+        padding-bottom: 5.82353515625vw;
 
         #contato {
             /******************************/

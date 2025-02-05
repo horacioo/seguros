@@ -1,4 +1,3 @@
-
 <?php
     while (have_posts()) :
         the_post();
@@ -6,10 +5,11 @@
         $titulo = get_the_title();
         $resumo = get_the_excerpt();
 
-        if(is_single(  )){
+        // Adicionar schema para Post (Article)
+        $article_schema = 'itemscope itemtype="https://schema.org/Article"';
+
+        if(is_single( )){
             $current_category = get_the_category( $id );
-            //echo "aqui é um single "; 
-            //print_r( $current_category[0]->term_id  );
             $idDaCategoria = $current_category[0]->term_id;
            // print_r( $current_category[0] );
         }
@@ -19,37 +19,31 @@
         $image_path = get_attached_file($image_id); // Caminho absoluto 
         /**************************************************************/
         $tamanhos = [
-            ['largura' => 1100, 'altura' => 212,   'qualidade' => 90],
+            ['largura' => 1100, 'altura' => 212, 'qualidade' => 60],
         ];
-        $imagens = reduzirImagem($image_path, $tamanhos);
+        $imagens = reduzirImagem($image_path, $tamanhos, "jpeg");
         /**************************************************************/
 
+        $conteudo  = get_the_content();
+        $categoria = get_the_category( $id );
+        $content = inserir_html_no_meio_do_conteudo($conteudo, $categoria);
 
+        // Adicionar schema para Imagem (ImageObject)
         if( is_array($imagens) ):        
-             echo '<img alt="imagem do produto" width="219" height="134" src="' . $imagens['urls']['1100x212'] . '" class="thumb">';
+            echo '<p itemscope itemtype="https://schema.org/ImageObject">';
+            echo '<img title='.get_the_excerpt( $id ).' width="219" height="134" alt="corretora de seguros em santos '.$image_id.' " src="' . $imagens['urls']['1100x212'] . '" itemprop="url image" class="thumb">';
+            echo '<meta itemprop="width" content="219">';
+            echo '<meta itemprop="height" content="134">';
+            echo '<meta itemprop="contentUrl" content="' . $imagens['urls']['1100x212'] . '">';
+            echo '<meta itemprop="encodingFormat" content="image/jpeg">'; // ou outro formato, como 'image/png'
+            echo '</p>';
         endif;
 
-        echo "<div id='content'>";
-        echo '<h1>' . $titulo . '</h1>';
-        the_content();
-
-        echo "<hr>";
-
-
-        // Obtém as categorias associadas ao post atual
-        $categories = get_the_category();
-
-        if (! empty($categories)) {
-            echo '<ul class="post-categories">';
-            // Loop por cada categoria e exibe o nome com link
-            foreach ($categories as $category) {
-                echo '<li>Mais Textos da Categoria: <a href="' . esc_url(get_category_link($category->term_id)) . '"> ' . esc_html($category->name) . '</a></li>';
-            }
-
-            echo '</ul>';
-        }
+        // Iniciar o conteúdo principal com schema Article
+        echo "<div id='content' $article_schema>";
+        echo '<h1 itemprop="headline">' . $titulo . '</h1>'; // Adicionar itemprop para título
+        echo '<div itemprop="articleBody">' . $content . '</div>'; // Adicionar itemprop para conteúdo
         echo "</div>";
 
     endwhile;
-    ?>
-
+?>

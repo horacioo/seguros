@@ -43,12 +43,15 @@ function reduzirImagem($caminhoImagem, $tamanhos, $extensao = 'avif') {
 
     // Verifica se a pasta 'reduzidas' existe e cria se necessário
     if (!is_dir($pastaSalvar)) {
-        if (!mkdir($pastaSalvar, 0755, true)) {
+        if (!mkdir($pastaSalvar, 0777, true)) {
             return "Erro: Não foi possível criar a pasta 'reduzidas'.";
         }
+        chmod($pastaSalvar, 0777); // Garante que a pasta seja gravável
+    }
 
-        // Altera as permissões da pasta mãe se necessário
-        chmod(dirname($pastaSalvar), 0755);
+    // Verifica se o diretório é gravável
+    if (!is_writable($pastaSalvar)) {
+        return "Erro: O diretório não é gravável.";
     }
 
     foreach ($tamanhos as $tamanho) {
@@ -119,13 +122,23 @@ function reduzirImagem($caminhoImagem, $tamanhos, $extensao = 'avif') {
         // Copia a parte central da imagem redimensionada para a imagem final
         imagecopyresampled($imagemFinal, $imagemRedimensionada, 0, 0, $xOffset, $yOffset, $largura, $altura, $largura, $altura);
 
-        // Salva a imagem final no formato apropriado
+        // Verifica se o PHP tem suporte para AVIF
+        if (!function_exists('imageavif') && $extensao === 'avif') {
+            return "Erro: Suporte para AVIF não disponível no servidor.";
+        }
+
+        // Tenta salvar a imagem no formato correto
+        $salvouComSucesso = false;
         if ($extensao === 'avif' && function_exists('imageavif')) {
-            imageavif($imagemFinal, $caminhoSalvar, $qualidade);
+            $salvouComSucesso = imageavif($imagemFinal, $caminhoSalvar, $qualidade);
         } elseif ($extensao === 'png') {
-            imagepng($imagemFinal, $caminhoSalvar);
+            $salvouComSucesso = imagepng($imagemFinal, $caminhoSalvar);
         } elseif ($extensao === 'jpeg' || $extensao === 'jpg') {
-            imagejpeg($imagemFinal, $caminhoSalvar, $qualidade);
+            $salvouComSucesso = imagejpeg($imagemFinal, $caminhoSalvar, $qualidade);
+        }
+
+        if (!$salvouComSucesso) {
+            return "Erro: Não foi possível salvar a imagem em {$caminhoSalvar}.";
         }
 
         $resultados[] = "Imagem salva com sucesso em: " . $caminhoSalvar;
@@ -144,3 +157,4 @@ function reduzirImagem($caminhoImagem, $tamanhos, $extensao = 'avif') {
         'urls' => $urlsImagens // Retorna as URLs das imagens organizadas
     ];
 }
+

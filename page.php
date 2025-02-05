@@ -9,7 +9,6 @@ get_template_part('partes/menu/index');
 </main>
 <aside></aside>
 
-<!----------------------------------------------------------->
 
 
  <?php get_template_part('partes/footer/index'); ?> 

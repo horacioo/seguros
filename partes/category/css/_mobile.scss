@@ -23,9 +23,10 @@
         width:93vw;
     }
     #categorias {
+    
         @include fontes();
    
-        width: 50vw;
+        width: 90vw;
         position: relative;
         left: 50%;
         transform: translateX(-50%);

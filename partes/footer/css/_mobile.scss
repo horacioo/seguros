@@ -11,34 +11,46 @@
     overflow: hidden;
 }
 
-
-
-
 @mixin fundosBrancos() {
     padding: 4.6748046875vw;
     background-color: lighten($cor1, 10);
     color: white;
     border-radius: 0.79296875vw;
     width: 100%;
-    
 }
 
- 
-
-
 @include respond-to(mobile) {
+    #chameWatsApp {
+        position: fixed;
+        padding: 1vw;
+        right: 0.9765625vw;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        background-color: white;
+        border-radius: 2vw;
+        z-index: 300000;
+        img {
+            width: 10vw;
+            height: auto;
+        }
+    }
+
     footer {
-        
+        a {
+            color: white;
+        }
+
         background-color: lighten($cor1, 0);
         padding-left: 8.59375vw;
         padding-right: 8.59375vw;
-        padding-top:6.169921875vh;
+        padding-top: 6.169921875vh;
         display: flex;
         flex-direction: column;
         gap: 5.9765625vw;
         justify-content: space-around;
         padding-bottom: 3.2353515625vw;
-
+        position: relative;
 
         #contato {
             /******************************/
@@ -47,31 +59,47 @@
             display: flex;
             flex-direction: column;
             height: auto;
-           @include fontes();
+            @include fontes();
             /******************************/
-           
         }
 
         #listaDeProdutos {
-            
             @include fundosBrancos();
             width: 100%;
-            h2{
+            h2 {
                 margin-bottom: 1.080078125vw;
             }
-            ul{
+            ul {
                 display: flex;
                 flex-direction: row;
                 gap: 2.2353515625vw;
                 width: 100%;
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
                 justify-content: space-between;
-                li{
-                    
+                li {
                     white-space: nowrap;
                     @include fontes();
                 }
             }
+        }
+
+        #brand {
+            display: block;
+            position: absolute;
+            font-size: 2.4vw;
+            text-align: center;
+            a {
+                color: white;
+                text-transform: uppercase;
+                font-weight: 100;
+                letter-spacing: 0.24vw;
+            }
+            bottom: 0vw;
+            width: 97vw; 
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3vw;
+            background-color: adjust-hue($cor1,30);
         }
     }
 }

@@ -1,0 +1,8 @@
+@use "sass:math"; // Importa o módulo math para cálculos seguros
+
+$tela: 1024;
+
+
+@function vw($px-value) {
+  @return math.div($px-value, $tela) * 100vw;
+}

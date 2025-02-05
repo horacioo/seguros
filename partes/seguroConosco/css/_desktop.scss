@@ -1,0 +1,64 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/util/vw";
+
+
+@include respond-to(bigger) {
+    #fazerConosco {
+        height: vw(527);
+        position: relative;
+        background-color: white;
+        //left: 50%;
+        //transform: translateX(-50%);
+        width: vw(914);
+        margin-left: vw(55);
+        margin-right: vw(55);
+        padding-top: 2.9296875vw;
+    
+        
+        picture{
+            position: absolute;
+            right: 0;
+            top: 1.171875vw;
+            width:28.41796875vw;
+            height: vw(474);
+            border-radius: 0.48828125vw;
+         
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        div {
+            width: 56.54296875vw;
+            p{width: 100%;}
+            p,
+            li {
+                line-height: 1.68;
+                font-size: vw(12);  
+                color: $cor1;
+                margin-bottom: vw(13);
+                letter-spacing: 0.03vw;
+                text-align: justify;
+            }
+
+            ul {
+                li {
+                    margin-left: vw(57);
+                }
+            }
+        }
+
+        h2 {
+            font-size: 3.61328125vw;
+            color: $cor1;
+            margin-bottom: 1.26953125vw;
+            text-transform: uppercase;
+        }
+    }
+}

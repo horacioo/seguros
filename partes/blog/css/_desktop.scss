@@ -18,6 +18,12 @@
         position: relative;
         z-index: 2;
 
+        .link{
+            color: darken($cor1,10);
+            line-height: 1.6;
+            z-index: 3000000;
+        }
+
         h2 {
             margin-bottom: 1.953125vw;
             color: darken($cor1, 15);
@@ -61,7 +67,8 @@
                 }
 
                 .button {
-                    background-color: darken($cor1,10);
+                   //background: linear-gradient(to bottom, $cor5, hue-adjust($cor5,20deg) );  //background-color: $cor5;
+                    background: linear-gradient(to bottom, $cor5, adjust-hue($cor5, 30));
                     padding: 1vw;
                     color: white;
                     border-radius: 0.29296875vw;
