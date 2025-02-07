@@ -2,7 +2,7 @@
 
     <div>
         <h2>Por que fazer seguros Conosco?</h2>
-        <p>
+        <p id="p1">
             Na hora de proteger o que realmente importa, escolher a corretora de seguros em Santos certa faz toda a diferença. Aqui, oferecemos mais do que apólices –<br> oferecemos tranquilidade, segurança e um atendimento realmente próximo.
         </p>
 
@@ -13,7 +13,7 @@
             <li>Suporte em Todo o Processo – Do primeiro contato até a renovação, estamos ao seu lado, garantindo que tudo seja transparente e sem burocracia.</li>
         </ul>
 
-        <p>
+        <p id="p3">
             Se você busca uma corretora de seguros em Santos que realmente se preocupa com a sua proteção, fale conosco hoje mesmo e descubra as melhores condições para o seu seguro!
         </p>
     </div>

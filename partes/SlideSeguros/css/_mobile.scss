@@ -1,0 +1,105 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+
+.screen-reader-text {
+    width: 1px;
+    overflow: hidden;
+}
+
+$padding: 330;
+
+@include respond-to(mobile) {
+    #SlideSeguros {
+        width: 90vw;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 5vw;
+        position: relative;
+        display: grid;
+        left: 50%;
+        transform: translateX(-50%);
+
+        grid-template-columns: 5.37109375vw 79.2578125vw 5.37109375vw;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". title ."
+            ". slide ."
+            ". apr .";
+
+        overflow: hidden; /* Evita barras de rolagem indesejadas */
+
+        h2 {
+            grid-area: title;
+            color: $cor1;
+            font-family: "passion" !important;
+            font-size: vw(120);
+        }
+
+        #apresentacao {
+            width: 100%;
+            grid-area: apr;
+
+            p {
+                display: block;
+                max-width: 100%;
+                margin-bottom: vw(15);
+                color: $cor1;
+            }
+        }
+
+        .slide {
+            margin-bottom: 4vh;
+            grid-area: slide;
+            height: 100%;
+            position: relative;
+
+            h3 {
+                font-family: "passion" !important;
+                text-transform: uppercase;
+                color: #ffffff;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: vw(15);
+                background-color: darken($cor1,20%);
+            }
+            picture {
+                border: 1px solid $cor1;
+                display: block;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-dots {
+            display: flex;
+            flex-direction: row;
+            gap: vw(5);
+            justify-content: center;
+            bottom: 1.033125vw;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            li {
+                button {
+                    width: vw(34);
+                    background-color: $cor1;
+                    border: none;
+                    color: white;
+                    border-radius: vw(20);
+                    text-align: center;
+                    font-size: vw(25);
+                }
+            }
+        }
+    }
+}

@@ -35,16 +35,32 @@
 
 
 
-    <style>
+   <!--- <style>
         @font-face {
             font-family: "Inter";
-            src: url("<?php echo tema ?>/fontes/Inter-Regular.otf") format('opentype');
+            src: url("<?php echo tema ?>/fontes/league/LeagueSpartan-Regular.ttf") format('truetype');
         }
+
+        @font-face {
+            font-family: "inter2";
+            src: url("<?php echo tema ?>/fontes/league/LeagueSpartan-ExtraLight.ttf")format('truetype');
+        }
+
+
+        @font-face {
+            font-family: "passion";
+            src: url("<?php echo tema ?>/fontes/passion/PassionOne-Regular.ttf")format('truetype');
+        }
+
+       
 
         * {
             font-family: 'Inter';
         }
-    </style>
+    </style>-->
+
+
+    <?php echo get_template_part( 'fontes' )?>
 
 
     <link rel="stylesheet" href="<?php echo tema; ?>/css/slick/slick.css" media="all">

@@ -1,0 +1,72 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/util/vw";
+
+@include respond-to(bigger) {
+    #ComoFunciona {
+        margin-left: vw(55);
+        margin-right: vw(55);
+        display: flex;
+        flex-direction: column;
+        gap: vw(30);
+        font-size: vw(13);
+        font-weight: 400;
+        line-height: 167.99999475479126%;
+        letter-spacing: 0%;
+        color: $cor1;
+        margin-bottom: vw(10);
+
+        .destaque{
+            font-family: "passion" !important;
+            font-size: vw(29);
+            text-transform: uppercase;
+            color: #fa610b;
+            display: block;
+        }
+
+        h2 {
+            font-family: "passion" !important;
+            color: #fa610b;
+            font-size: vw(51);
+            font-weight: 400;
+            line-height: 113.99999856948853%;
+        }
+
+        ul{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(vw(243.93), 1fr));
+            grid-template-rows: auto;
+            gap: vw(35);
+            
+            li{
+                h3{
+                    font-family: "inter2" !important;
+                    font-size: vw(14);
+                }
+                height: auto;
+                overflow: auto;
+                //text-align: justify;
+
+                picture{
+                    height: vw(236);
+                    width: vw(236);
+                    display: block;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 98%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

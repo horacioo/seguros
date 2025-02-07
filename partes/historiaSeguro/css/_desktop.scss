@@ -1,0 +1,56 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/util/vw";
+
+@include respond-to(bigger) {
+    #historia {
+
+        padding-left: vw(55);
+        padding-right: vw(55);
+        width: 100vw;
+        position: relative;
+        color: $cor1;
+        font-size: vw(14);
+        background-color: $cor1;
+        padding-top:vw(86);
+        padding-bottom:vw(86);
+        h2{
+            color: white;
+            font-family: "passion" !important;
+            font-size: vw(63);
+            width: vw(429);
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        div {
+            width: vw(397);
+            margin-right:vw(24);
+            p {
+                color: white;
+                text-align: justify;
+                line-height: 167.99999475479126%;
+            }
+        }
+
+        picture{
+            position: absolute;
+            width: vw(467);
+            height: vw(443);
+            display: block;
+            left: vw(521);
+            top:vw(86);
+            border: 1px  solid $cor1;
+            overflow: hidden;
+            border-radius: vw(20);
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

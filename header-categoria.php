@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" itemscope itemtype="https://schema.org/CollectionPage" >
+<html lang="pt-BR" itemscope itemtype="https://schema.org/CollectionPage">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     ?>
 
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
@@ -53,16 +53,8 @@
     </script>
 
 
-    <style>
-        @font-face {
-            font-family: "Inter";
-            src: url("<?php echo tema ?>/fontes/Inter-Regular.otf") format('opentype');
-        }
-
-        * {
-            font-family: 'Inter';
-        }
-    </style>
+     <!----------chamando os arquivos de fontes----------------->
+     <?php echo get_template_part( 'fontes' )?>
 
 
 

@@ -34,16 +34,9 @@
     </script>
 
 
-    <style>
-        @font-face {
-            font-family: "Inter";
-            src: url("<?php echo tema ?>/fontes/Inter-Regular.otf") format('opentype');
-        }
 
-        * {
-            font-family: 'Inter';
-        }
-    </style>
+    <!----------chamando os arquivos de fontes----------------->
+    <?php echo get_template_part( 'fontes' )?>
 
 
     <link rel="stylesheet" href="<?php echo tema; ?>/css/slick/slick.css" media="all">

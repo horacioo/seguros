@@ -7,6 +7,8 @@
 @import "../../../css/util/vw";
 
 
+$fontSize:13.3;
+
 @include respond-to(bigger) {
     #fazerConosco {
         height: vw(527);
@@ -18,17 +20,16 @@
         margin-left: vw(55);
         margin-right: vw(55);
         padding-top: 2.9296875vw;
-    
-        
-        picture{
+
+        picture {
             position: absolute;
             right: 0;
             top: 1.171875vw;
-            width:28.41796875vw;
+            width: 28.41796875vw;
             height: vw(474);
             border-radius: 0.48828125vw;
-         
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }
@@ -36,11 +37,19 @@
 
         div {
             width: 56.54296875vw;
-            p{width: 100%;}
+
+            #p1{  width:vw(498);   }
+            #p3{  width:vw(579);  }
+
+            p {
+                text-align: justify;
+                width: 100%;
+                font-size: vw($fontSize);
+            }
             p,
             li {
                 line-height: 1.68;
-                font-size: vw(12);  
+                font-size: vw($fontSize);
                 color: $cor1;
                 margin-bottom: vw(13);
                 letter-spacing: 0.03vw;
@@ -58,6 +67,8 @@
             font-size: 3.61328125vw;
             color: $cor1;
             margin-bottom: 1.26953125vw;
+            text-transform: uppercase;
+            font-family: "passion" !important;
             text-transform: uppercase;
         }
     }

@@ -1,0 +1,65 @@
+@import "../../../css/mixins/heights";
+@import "../../../css/util/_breakpoints";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/variaveis/caminhos";
+@import "../../../css/util/breakpoints";
+@import "../../../css/mixins/button";
+@import "../../../css/util/vw";
+
+@include respond-to(bigger) {
+    #localizacao {
+        margin-bottom: 5vw;
+        padding-left: vw(55);
+        padding-right: vw(55);
+        width: 100vw;
+        position: relative;
+        color: $cor1;
+
+        background: linear-gradient(45deg, white, adjust-hue(lighten($cor1, 35), 30deg));
+        padding-top: vw(86);
+        padding-bottom: vw(86);
+        h2 {
+
+            font-family: "passion" !important;
+            font-size: vw(67);
+            width: vw(545);
+            text-align: left;
+            text-transform: uppercase;
+            color: #FA610B;
+        }
+
+        div {
+            width: vw(540);
+            margin-right: vw(55);
+            p {
+                font-size: vw(14);
+                color: $cor1;
+                text-align: justify;
+                line-height: 167.99999475479126%;
+                font-weight: 400;
+
+                text-align: justify;
+            }
+        }
+
+        picture {
+            position: absolute;
+            width: vw(317);
+            height: vw(355);
+            display: block;
+            left: vw(650);
+            top: vw(86);
+            border: 1px solid $cor1;
+            overflow: hidden;
+            border-radius: vw(20);
+            img {
+                width: auto;
+                height: 110%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
